@@ -1,0 +1,1131 @@
+:root {
+    --color1: #111821;
+    --color2: #926906;
+    --color3: #c89e4f;
+    --color4: #fff;
+    --color5: #ebd5ad;
+    --color6: #E0BFB8;
+    /* rose or  */
+}
+
+@font-face {
+    font-family: agenda;
+    src: url(../fonts/Agenda\ Medium.otf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*POPUP*/
+
+#popup {
+    position: fixed;
+    text-align: center;
+    font-family: raleway;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color1);
+    color: var(--color5);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: parution .5s ease-in;
+    display: block;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--color5), var(--color3));
+    box-shadow: 0 0 3px 1px var(--color3);
+    min-width: 320px;
+}
+
+@keyframes parution {
+    0% {
+        opacity: 0;
+        transform: translate(500px, -50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#popup a {
+    color: var(--color4);
+    font-weight: bold;
+}
+
+#popup a:hover {
+    color: var(--color6);
+}
+
+#popup span {
+    color: red;
+}
+
+#popup .buttonPopup {
+    background-color: var(--color3) !important;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+/*MENU*/
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    font-size: 14px;
+    font-family: raleway;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--color4);
+}
+
+#menu .logo {
+    position: relative;
+    bottom: 5px;
+}
+
+.menudroite,
+.menuresponsivedroite2,
+.menugauche,
+.menuresponsivegauche2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.reseauxsociaux {
+    position: relative;
+    display: flex;
+}
+
+.reseauxsociaux a {
+    padding: 3px;
+}
+
+.menudroite {
+    line-height: 15px;
+}
+
+.menugauche,
+.menudroite {
+    width: 100%;
+    font-weight: 450;
+}
+
+.boncadeau a img,
+.nospresta a img {
+    position: relative;
+    bottom: 5px;
+}
+
+.cmpt a {
+    position: relative;
+    bottom: 5px;
+}
+
+.pageactuelle {
+    text-decoration: 3px underline var(--color3);
+    text-underline-offset: 10px;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menuresponsivegauche,
+.menuresponsivedroite {
+    display: none;
+}
+
+#menu span {
+    color: red;
+}
+
+.logoresponsive {
+    display: none;
+}
+
+.flou {
+    filter: blur(5px);
+}
+
+#reseauxsociaux {
+    display: none;
+}
+
+#reseauxsociaux a {
+    margin-left: 10px;
+}
+
+/*BANNIERE*/
+
+.banniere {
+    background: rgba(0, 0, 0, 0.5) url(../images/banniere.webp);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color4);
+    font-family: agenda;
+    position: relative;
+    margin-top: 150px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--color5), var(--color3));
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+/*PRESENTATION(+footer span)*/
+
+.presentation {
+    text-align: center;
+    color: var(--color1);
+    padding: 50px;
+}
+
+.presentation a {
+    text-decoration: none;
+    color: var(--color1);
+    font-weight: 500;
+}
+
+.presentation span,
+.footer span {
+    font-size: 20px;
+    color: var(--color3);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.presentation h2 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.presentation p {
+    font-family: raleway;
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn {
+    padding: 20px !important;
+    margin-top: 10px;
+    font-family: raleway;
+    color: var(--color4) !important;
+    border: 2px solid var(--color3) !important;
+}
+
+.btn:hover {
+    background-color: var(--color3) !important;
+    color: var(--color1) !important;
+    border: 2px solid var(--color1) !important;
+}
+
+/*noscentres*/
+.centres {
+    text-align: center;
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 50px 12px;
+}
+
+.centres a {
+    text-decoration: none;
+    width: 70%;
+    border: 8px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, var(--color5), var(--color3));
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.centres .nomducentre:hover {
+    background: #eeeee1c2;
+}
+
+.centres h2,
+.presentationnoscentres h1 {
+    color: var(--color1);
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.centres .nomducentre {
+    color: var(--color4);
+    padding: 10px;
+    background: #ffffffc2;
+    position: relative;
+    width: 100%;
+    height: 160px;
+}
+
+.centres .nomducentre img {
+    max-width: 380px;
+}
+
+.centrespa {
+    background: url(../images/centrespa.webp);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border: 1px solid var(--color3);
+}
+
+.centrepool {
+    background: url(../images/piscine_PrivatePool.webp);
+    background-position: center;
+    background-size: auto;
+    height: 300px;
+    border: 1px solid var(--color3);
+}
+
+/*choix*/
+
+.choix {
+    padding: 50px 0;
+}
+
+.choix a {
+    text-decoration: none;
+    color: var(--color1);
+    width: 95%;
+}
+
+.choix a:hover {
+    background-color: #fbf8f2;
+}
+
+.choix h3 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--color1);
+}
+
+.choix p {
+    font-family: raleway;
+    font-size: 16px;
+}
+
+.consultez,
+.offrez,
+.forces {
+    height: 220px;
+    text-align: center;
+    border: 3px outset #F0D8B0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*nosplus*/
+
+.nosplus {
+    padding: 50px 0;
+    background-color: white !important;
+}
+
+.nosplus div {
+    height: 150px;
+}
+
+.nosplus h2 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nosplus h3 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color1);
+}
+
+.nosplus img {
+    width: 60px;
+    margin: 20px 0;
+}
+
+/*suivez-nous*/
+
+.suiveznous {
+    background-color: #f8f9fa;
+    min-height: 200px;
+    padding: 50px 0;
+}
+
+.suiveznous h2 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color1);
+}
+
+.suiveznous p {
+    font-family: raleway;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.suiveznous a {
+    text-decoration: none;
+}
+
+/*footer*/
+
+.footer {
+    background-color: var(--color1);
+    color: var(--color4);
+    font-family: raleway;
+    font-size: 15px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.titreFooter {
+    color: var(--color3);
+    font-family: raleway;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color4);
+}
+
+.footer a:hover,
+.footer2 a:hover {
+    color: var(--color3);
+}
+
+.footer2 {
+    background-color: var(--color1);
+    color: var(--color4);
+    font-family: raleway;
+    font-size: 15px;
+    text-align: center;
+}
+
+.footer2 a {
+    text-decoration: none;
+    color: var(--color4);
+    display: contents;
+}
+
+
+.footer span {
+    visibility: hidden;
+}
+
+/*PRIVATE POOL*/
+
+.bannierePool {
+    background: rgba(0, 0, 0, 0.2) url(../images/piscine_PrivatePool.webp);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color2);
+    text-align: center;
+    font-family: agenda;
+    position: relative;
+    margin-top: 150px;
+    letter-spacing: -1px;
+}
+
+.bannierePool h1 {
+    background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    padding: 20px 50px;
+    margin: 0;
+}
+
+.bannierePool img {
+    max-width: 350px;
+    min-width: 200px;
+    width: 50vw;
+}
+
+/*CONCEPT*/
+
+.banniereconcept {
+    background: rgba(0, 0, 0, 0.5) url(../images/concept.webp);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color3);
+    font-family: agenda;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.banniereconcept p,
+.bannierePool p {
+    font-size: 18px;
+    text-align: center;
+    font-family: raleway;
+    color: var(--color4);
+    margin-bottom: 0;
+}
+
+/*slider*/
+
+.presentationconcept {
+    font-family: raleway;
+    background-color: var(--color4);
+    width: 90%;
+}
+
+.sliderbox {
+    position: relative;
+    z-index: 1;
+}
+
+.slider img {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.textslider {
+    position: relative;
+    padding: 50px;
+}
+
+.textslider h3 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 38px;
+}
+
+.textslider p {
+    font-size: 15px;
+    padding-left: 38px;
+}
+
+.serviette {
+    position: absolute;
+    width: 200px;
+    top: -75px;
+    right: 0;
+    z-index: 2;
+}
+
+/*NOS CENTRES*/
+
+.presentationnoscentres {
+    position: relative;
+    margin-top: 150px;
+}
+
+.nomducentre p {
+    color: var(--color2);
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+/*NOS TARIFS*/
+/*reservation*/
+
+.presentationreservation {
+    margin-top: 150px;
+}
+
+.presentationreservation h1 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.reservation {
+    border: 1px outset var(--color3);
+    font-family: raleway;
+    width: fit-content;
+    padding: 0 25px;
+    margin: 25px auto;
+    background-color: #f8f1e3;
+}
+
+.reservation ul {
+    list-style-type: none;
+    font-size: 15px;
+    padding: 0;
+}
+
+.petit {
+    font-size: 13px;
+}
+
+/*tarifs*/
+
+#tarifsPool {
+    scroll-margin-top: 160px;
+}
+
+.tarifs {
+    padding: 20px 0 20px;
+}
+
+.titreReservation {
+    background: linear-gradient(to right, var(--color6), var(--color5));
+    width: fit-content;
+    padding: 10px;
+    margin: auto;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.grilletarifaire span {
+    font-size: 13px;
+    color: var(--color1);
+    font-weight: normal;
+}
+
+.sousgrille p {
+    font-family: agenda;
+    font-size: 20px;
+    color: var(--color1);
+}
+
+.sousgrille ul {
+    list-style-type: none;
+    background-color: #efe2cb79;
+    border: 1px solid var(--color5);
+    padding: 10px;
+    color: var(--color1);
+    font-size: 13px;
+}
+
+.grilletarifaire {
+    padding-top: 30px;
+    background: #f6f4f1d7 url(../images/rose.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    font-family: raleway;
+    border: 1px solid var(--color6);
+}
+
+.sousgrille {
+    border: 1px solid var(--color6);
+    padding: 0 25px;
+    width: 70%;
+    min-width: fit-content;
+    margin: auto;
+    background-color: #fbf8f279;
+}
+
+.form-control {
+    background-color: #fbf8f2 !important;
+    width: 300px;
+    margin: auto;
+    font-family: raleway;
+}
+
+/*BON CADEAU*/
+
+.presentationboncadeau {
+    position: relative;
+    margin-top: 150px;
+}
+
+.presentationboncadeau h1 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.presentationboncadeau img {
+    width: 30%;
+    object-fit: cover;
+    box-shadow: 0px 0px 3px 0px var(--color3)
+}
+
+/*menu flottant*/
+
+.menuFlottant,
+.menuFlottant2 {
+    visibility: hidden;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    position: fixed;
+    font-family: raleway;
+}
+
+.menuFlottant {
+    top: 295px;
+}
+
+.menuFlottant2 {
+    top: 250px;
+}
+
+.menuFlottant a,
+.menuFlottant2 a {
+    border-radius: 40px 0 0 40px;
+    height: 40px;
+    width: auto;
+    overflow: hidden;
+    background-color: #fff3dee1;
+    display: flex;
+    align-items: center;
+    border: 1px inset var(--color3);
+    border-right: none;
+    letter-spacing: -.5px;
+}
+
+.menuFlottant img {
+    height: 40px;
+    padding: 7px;
+}
+
+.menuFlottant2 img {
+    margin: 7px 2px;
+}
+
+.menuFlottant a,
+.menuFlottant2 a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 14px;
+}
+
+/*scroll up*/
+
+.scrollup {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.524);
+    right: 2%;
+    top: 92%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px var(--color2);
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.scrollup:hover {
+    background-color: var(--color5);
+    box-shadow: 1px 1px 3px var(--color1);
+}
+
+/*NOS FORCES*/
+
+.nosforces,
+.galerie,
+.plandusite {
+    padding: 50px 12px;
+    margin-top: 150px;
+}
+
+.nosforces h1,
+.galerie h1,
+.plandusite h1 {
+    font-family: agenda;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color1);
+}
+
+.presentationnosforces {
+    font-size: 15px;
+    font-family: raleway;
+    padding: 50px 20px;
+}
+
+.presentationnosforces h2 {
+    color: var(--color2);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*GALERIE*/
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c89e4f' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c89e4f' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-item img {
+    height: 540px;
+    width: 290px;
+    margin: auto;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(to left, var(--color3), var(--color5), var(--color3));
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 0 5px 1px var(--color1);
+}
+
+.carousel {
+    margin: auto;
+    width: 400px;
+}
+
+/*CAROUSEL POOL*/
+
+#prochainement {
+    filter: blur(4px);
+}
+
+.bientot {
+    position: absolute;
+    z-index: 9999;
+    font-size: 200px;
+    color: #926906;
+}
+
+#carouselPool img {
+    height: 540px;
+    width: 375px;
+    margin: auto;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(to left, var(--color3), var(--color5), var(--color3));
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 0 5px 1px var(--color1);
+}
+
+/*PLAN DU SITE*/
+
+.plandusite a {
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.plandusite li {
+    line-height: 30px;
+}
+
+.plandusite ul {
+    list-style-type: square;
+    margin-left: 100px;
+}
+
+.plandusite ul ul {
+    padding: 0;
+    margin-left: 0;
+}
+
+.plandusite ul ul li {
+    margin-left: 25px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+    .space {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .logo {
+        display: none;
+    }
+
+    #reseauxsociaux {
+        display: block;
+        position: absolute;
+        /* right: 20px;*/
+        top: 120px;
+    }
+
+    .coupe {
+        display: none;
+    }
+
+    /* #nouveauPool {
+        position: absolute;
+        text-align: center;
+        top: 80px;
+        left: 25%;
+    } */
+
+    .logoresponsive {
+        display: block;
+        text-align: center;
+        width: 110px;
+        z-index: 200;
+
+    }
+
+    .logoresponsive img {
+        width: 60%;
+    }
+
+    #menu .menugauche,
+    #menu .menudroite {
+        display: none;
+    }
+
+    .menuresponsivegauche,
+    .menuresponsivedroite {
+        display: block;
+        position: relative;
+    }
+
+    .sousmenu {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 37px;
+        left: 0;
+        padding: 0;
+        padding-bottom: 25px !important;
+        height: auto;
+        width: 100vw;
+        background-color: white;
+        overflow-x: hidden;
+        z-index: 100;
+    }
+
+    /* .menuresponsivegauche ul li:hover .sousmenu {
+        visibility: visible;
+
+    } */
+
+    .sousmenu li {
+        width: 90%;
+        padding: 25px;
+        margin: auto;
+    }
+
+    .sousmenu li:first-child {
+        border-bottom: 2px solid var(--color3);
+        text-underline-offset: 50px;
+        padding-top: 60px;
+    }
+
+    .sousmenu li {
+        border-bottom: 1px solid var(--color5);
+        text-underline-offset: 50px;
+    }
+
+    .menuFlottant,
+    .menuFlottant2 {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer span {
+        visibility: visible !important;
+    }
+
+    .presentationconcept {
+        margin: auto !important;
+    }
+
+    .sliderbox {
+        height: 400px;
+        padding: 0 !important;
+    }
+
+    .textslider {
+        text-align: center;
+    }
+
+    .textslider h3,
+    .textslider p {
+        padding-left: 0 !important;
+    }
+
+    .presentationboncadeau img {
+        width: 80% !important;
+    }
+
+    .banniere,
+    .banniereconcept {
+        height: 300px !important;
+    }
+
+    .bannierePool {
+        height: 200px !important;
+    }
+
+    .space2 {
+        padding-bottom: 20px;
+    }
+
+    .sousparties2 {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .coupe {
+        display: block;
+    }
+
+    #nouveauPool {
+        top: 60px;
+    }
+
+    .carousel {
+        width: 285px !important;
+    }
+
+    .carousel-item img {
+        height: 466px !important;
+        width: 260px !important;
+    }
+
+    #carouselPool img {
+        width: 300px !important;
+    }
+
+    .titreReservation {
+        font-size: 15px !important;
+    }
+
+    .grilletarifaire span {
+        font-size: 11px !important;
+    }
+
+    .sousgrille p {
+        font-size: 17px !important;
+    }
+
+    .centrespa,
+    .centrepool {
+        height: 200px !important;
+    }
+
+    .centres .nomducentre {
+        height: 120px !important;
+    }
+
+    .presentation {
+        padding: 50px 10px !important;
+    }
+}
+
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.fullscreen-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -3,7 +3,7 @@ if (!localStorage.getItem("popupShown")) {
         <div id="popup">
           <h2><span>Nouveau !</span> PRIVATE&nbsp;POOL</h2>
           <p>Deux nouvelles salles disponibles avec piscine privative !<br>
-            Consultez notre page <a href="./privatepool.php">Private Pool</a> pour plus d'informations.
+            Consultez notre page <a href="./privatepool.html">Private Pool</a> pour plus d'informations.
           </p>
           <button class="buttonPopup form-control w-50">Fermer</button>
         </div>
